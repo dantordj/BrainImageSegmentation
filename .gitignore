@@ -1,0 +1,11 @@
+*.ipynb
+/data
+/mni
+/transformations
+/mni_test
+/transformations_test
+/venv
+ANTs
+*.pyc
+
+
