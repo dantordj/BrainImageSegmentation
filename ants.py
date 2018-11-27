@@ -53,10 +53,3 @@ for image in tqdm(os.listdir(folder_images)):
         os.rename('transformWarped.nii.gz', folder_mni + image + '_mni.nii.gz')
 
     os.rename(image + '_glm_trans.nii.gz', folder_mni + image + '_glm_mni.nii.gz')
-
-
-
-
-
-
-from nipype.interfaces.ants import ApplyTransforms
