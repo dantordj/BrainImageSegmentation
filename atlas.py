@@ -1,7 +1,7 @@
 import numpy as np
 
-class Atlas():
 
+class Atlas():
 
     def __init__(self, id):
         self.id = id
@@ -9,16 +9,18 @@ class Atlas():
         self.label = None
 
     def image_vector(self):
+        """ return the image data as a vector """
         return self.image.get_fdata().flatten()
 
     def label_vector(self):
-        return self.label.get_fdata().flatten()
+        """ return the label data as a vector """
+        labels = np.array(self.label.get_fdata().flatten(), dtype=int)
+        labels = np.array(labels == 47, dtype=int) + np.array(labels == 48, dtype=int)
+
+        return labels
 
     def features(self, conflict_voxels):
-        """ à implémente, return un array de size (nbr_voxels, size voisinage)
-        avec les différences d'intensité en faisant le matching voxels par voxel
-        dans le voisinage """
-        print("get features %s" %self.id)
+        """ return an array with the intensities retrieved from a neighborhood """
         voxels = self.image.get_fdata()
         init_shape = voxels.shape
         n_conflict = len(conflict_voxels)
