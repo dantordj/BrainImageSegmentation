@@ -1,6 +1,6 @@
 # BrainImageSegmentation
 
-In this repos we implement the method describre in the article *Discriminative confidence estimation for probabilistic multi-atlas label fusion,Benkarim OM1, Piella G2, González Ballester MA3, Sanroma G 
+In this repos we implement the method describre in the article *Discriminative confidence estimation for probabilistic multi-atlas label fusion,Benkarim OM, Piella G, González Ballester MA3, Sanroma G 
 *
 
 ## how to run the code 
